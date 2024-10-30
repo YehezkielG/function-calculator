@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Fungsi</title>
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="style/output.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        input {
+            color: black;
+            padding: 0px 3px;
+        }
+    </style>
+
+</head>
+
+<body class="p-5 text-white" style="background: #282828;">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.6/algebra.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.2.0/math.js"
+        integrity="sha512-K6yeEH8HDerhMdJyfx5uSdY0YHQAu2R0KhwGQ9Jzvh0qZPUjceeV7ch0BZz9w6UY+TgKldDzsQWVN+XeJ3PSzw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div style="width: 700px;" class="flex flex-wrap justify-center m-auto">
+        <div class="flex justify-between w-full gap-4">
+            <section class="text-xl sm:w-full my-5">
+                <h1 class="rounded-lg bg-primary inline-block text-black px-2 py-1">Fungsi Komposisi</h1>
+                <div class="my-10 flex justify-between">
+                    <span>f(x) = </span>
+                    <input type="text" class="border-2 text-xl w-10/12 rounded-md" id="Ffunction">
+                </div>
+                <div class="flex justify-between">
+                    <span>g(x) = </span>
+                    <input type="text" class="border-2 text-xl w-10/12 rounded-md" id="Gfunction">
+                </div>
+                <div class="my-10 flex flex-wrap">
+                    <span>(f o g)(
+                        <input type="text" class="w-7 inline-block text-center" id="input" value="x">
+                        ) = </span> <span id="result"></span>
+                </div>
+                <div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg float-right" onclick="calculate()">
+                        hitung
+                    </button>
+                </div>
+            </section>
+            <section class="text-xl sm:w-full my-5">
+                <h1 class="rounded-lg bg-primary inline-block text-black px-2  py-1">Fungsi Invers</h1>
+                <div class="my-10 flex justify-between">
+                    <span>f(x) = </span>
+                    <input type="text" class="border-2 text-xl w-10/12 rounded-md">
+                </div>
+                <div class="my-10 flex">
+                    f <span style="font-size: 12px;">-1</span> (x) = <span id="demo"></span>
+                </div>
+                <div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg float-right">
+                        hitung
+                    </button>
+                </div>
+            </section>
+        </div>
+        <section id="composition-form" class="text-black w-full">
+            <div class="button-row">
+                <button onclick="">C</button>
+                <button class="button">(□)</button>
+                <button class="button">+</button>
+                <button class="button">-</button>
+                <button class="button">÷</button>
+            </div>
+            <div class="button-row">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="button">×</button>
+                <button class="button">x</button>
+            </div>
+            <div class="button-row">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="button"><i>x</i><sup>□</sup></button>
+                <button class="button">y</button>
+            </div>
+            <div class="button-row">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="button">√□</button>
+                <button class="button"><sup>□</sup>√□</button>
+            </div>
+            <div class="button-row">
+                <button>0</button>
+                <button>π</button>
+                <button class="button">
+                    <span style="display: block; text-align: center;">
+                        <span style="display: inline-block; vertical-align: top;">□</span><br>
+                        <span style="display: inline-block; border-top: 1px solid; width: 20px;"></span><br>
+                        <span style="display: inline-block; vertical-align: bottom;">□</span>
+                    </span>
+                </button>
+                <button>.</button>
+                <button>=</button>
+            </div>
+        </section>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

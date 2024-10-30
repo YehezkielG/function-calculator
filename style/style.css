@@ -1,0 +1,35 @@
+@media screen and (min-width: 1000px){
+.container {
+    background: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+h1 {
+    text-align: center;
+    color: #000; 
+}
+
+button {
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    font-size: 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    width: calc(100% - 10px); 
+    margin: 3px;
+}
+
+button:active {
+    background-color: aqua; 
+    transform: scale(0.95); 
+}
+
+.button-row {display: flex;
+    justify-content: center; 
+    margin: 5px;
+}
+}
