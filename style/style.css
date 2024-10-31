@@ -1,28 +1,20 @@
 
 h1 {
     text-align: center;
-    color: #000; 
+    color: white;
 }
 
-button {
-    background-color: #f0f0f0; 
-    border: 1px solid #ccc; 
+.btn {
     border-radius: 5px; 
     padding: 10px; 
     font-size: 15px; 
     cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
     width: calc(100% - 10px); 
-    margin: 3px;
 }
-
-button:active {
-    background-color: aqua; 
-    transform: scale(0.95); 
-}
-
-.button-row {display: flex;
+.button-row {
+    display: flex;
     justify-content: center; 
-    margin: 5px;
+    margin: 5px 0;
+    gap: 5px;
 }
 
